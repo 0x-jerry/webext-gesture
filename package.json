@@ -1,0 +1,27 @@
+{
+  "name": "webext-gesture",
+  "description": "Mouse gestures for web browser.",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "compile": "vue-tsc --noEmit",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.283",
+    "@wxt-dev/module-vue": "^1.0.2",
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.10",
+    "wxt": "^0.19.16"
+  }
+}
