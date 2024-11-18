@@ -39,5 +39,5 @@ jobs:
         with:
           body_path: GEN_CHANGELOG.md
           files: |
-            update.xml
+            updates.xml
             webext-gesture.crx
