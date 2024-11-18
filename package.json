@@ -12,7 +12,7 @@
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
     "pack:crx": "crx pack .output/chrome-mv3 -o webext-gesture.crx -p ./key.pem",
-    "build:prepare": "tsx ./scripts/createUpdateFile.ts",
+    "build:prepare": "tsx ./scripts/prepare.ts",
     "compile": "vue-tsc --noEmit",
     "postinstall": "wxt prepare",
     "release": "x-release --publish false"
