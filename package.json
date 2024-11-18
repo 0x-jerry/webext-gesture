@@ -11,15 +11,21 @@
     "build:firefox": "wxt build -b firefox",
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
+    "pack:crx": "crx pack .output/chrome-mv3 -o .webext-gesture.crx -p ./key.pem",
+    "build:prepare": "tsx ./scripts/createUpdateFile.ts",
     "compile": "vue-tsc --noEmit",
-    "postinstall": "wxt prepare"
+    "postinstall": "wxt prepare",
+    "release": "x-release"
   },
   "dependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@0x-jerry/x-release": "^2.2.2",
     "@types/chrome": "^0.0.283",
     "@wxt-dev/module-vue": "^1.0.2",
+    "crx": "^5.0.1",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3",
     "vue-tsc": "^2.1.10",
     "wxt": "^0.19.16"
