@@ -16,9 +16,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version: 22
+          cache: 'pnpm'
+
+      - run: pnpm i
 
       - name: Generate Release Note
         run: npx changelogithub --output GEN_CHANGELOG.md
