@@ -31,5 +31,5 @@ async function createUpdateYamlFile(opt: {
 </gupdate>
     `.trim()
 
-  await writeFile('update.xml', updateContent)
+  await writeFile('updates.xml', updateContent)
 }
