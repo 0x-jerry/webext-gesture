@@ -2,7 +2,7 @@
 import { useEventListener } from '@vueuse/core'
 import { reactive } from 'vue'
 import { calcDirection, calcPath, distance } from './utils'
-import type { GestureDir, GesturePosition } from '@/entrypoints/services/types'
+import type { GestureDir, GesturePosition } from '@/services/types'
 
 export interface GestureDetectionProps {
   /**
