@@ -23,7 +23,7 @@ const gestureState = reactive({
   dirs: [] as GestureDir[],
   tracker: [] as GesturePosition[],
   clearHandler: -1,
-  clearTimeout: 200,
+  clearTimeout: 100,
 })
 
 const trackerPath = computed(() => calcPath(gestureState.tracker))
@@ -59,10 +59,14 @@ useEventListener(window, 'mouseup', () => {
 
   clearTimeout(gestureState.clearHandler)
 
-  if (gestureState.dirs.length) {
-    emit('detected', gestureState.dirs)
+  if (!gestureState.dirs.length) {
+    gestureState.preventCtxMenu = false
+    gestureState.processing = false
+    clearPath()
+    return
   }
 
+  emit('detected', gestureState.dirs)
   gestureState.processing = false
   clearPath()
 
