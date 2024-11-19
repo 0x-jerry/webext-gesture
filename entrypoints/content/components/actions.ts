@@ -26,6 +26,20 @@ const contentActions: GestureAction[] = [
       })
     },
   },
+  {
+    name: 'History Back',
+    gesture: [GestureDir.Left],
+    action() {
+      window.history.back()
+    },
+  },
+  {
+    name: 'History Forward',
+    gesture: [GestureDir.Right],
+    action() {
+      window.history.forward()
+    },
+  },
 ]
 
 export async function execGestures(gesture: GestureDir[]) {

@@ -23,7 +23,7 @@ const gestureState = reactive({
   dirs: [] as GestureDir[],
   tracker: [] as GesturePosition[],
   clearHandler: -1,
-  clearTimeout: 200
+  clearTimeout: 200,
 })
 
 const trackerPath = computed(() => calcPath(gestureState.tracker))
