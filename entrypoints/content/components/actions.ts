@@ -6,8 +6,11 @@ const contentActions: GestureAction[] = [
     name: 'Scroll To Top',
     gesture: [GestureDir.Right, GestureDir.Up],
     action() {
-      document.body.scrollTo({
+      const el = document.scrollingElement
+      if (!el) return
+      el.scrollTo({
         top: 0,
+        behavior: 'smooth',
       })
     },
   },
@@ -15,8 +18,11 @@ const contentActions: GestureAction[] = [
     name: 'Scroll To Down',
     gesture: [GestureDir.Right, GestureDir.Down],
     action() {
-      document.body.scrollTo({
-        top: document.body.scrollHeight,
+      const el = document.scrollingElement
+      if (!el) return
+      el.scrollTo({
+        top: el.scrollHeight,
+        behavior: 'smooth',
       })
     },
   },
