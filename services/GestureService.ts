@@ -20,6 +20,12 @@ const backgroundActions: GestureAction[] = [
       await browser.tabs.remove(tab.id)
     },
   },
+  {
+    gesture: [GestureDir.Right, GestureDir.Up],
+    async action() {
+      await browser.sessions.restore()
+    },
+  },
 ]
 
 class GestureService {

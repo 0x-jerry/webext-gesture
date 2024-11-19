@@ -12,5 +12,5 @@ export interface GesturePosition {
 
 export interface GestureAction {
   gesture: GestureDir[]
-  action: () => unknown
+  action: () => Promise<void> | void
 }

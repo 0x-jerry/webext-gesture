@@ -7,8 +7,13 @@ export async function matchThenExecGestures(
   const action = actions.find((n) => isTheSameGesture(n.gesture, gesture))
 
   if (action) {
-    await action?.action()
-    return true
+    try {
+      await action?.action()
+      return true
+    } catch (error) {
+      console.error(error)
+      return false
+    }
   }
 
   return false
