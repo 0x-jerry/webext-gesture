@@ -22,12 +22,22 @@ const gestureState = reactive({
   dirs: [] as GestureDir[],
   tracker: [] as GesturePosition[],
   clearHandler: -1,
-  clearTimeout: 200,
+  clearTimeout: 200
 })
 
 const trackerPath = computed(() => calcPath(gestureState.tracker))
 
 useEventListener(window, 'contextmenu', (evt) => {
+  if (gestureState.processing) {
+    evt.preventDefault()
+  }
+})
+
+useEventListener(window, 'mousedown', (evt) => {
+  if (evt.button !== 2) {
+    return
+  }
+
   if (gestureState.processing) {
     gestureState.processing = false
     clearPath()
