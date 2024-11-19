@@ -18,6 +18,7 @@ const emit = defineEmits<{
 }>()
 
 const gestureState = reactive({
+  preventCtxMenu: false,
   processing: false,
   dirs: [] as GestureDir[],
   tracker: [] as GesturePosition[],
@@ -28,7 +29,7 @@ const gestureState = reactive({
 const trackerPath = computed(() => calcPath(gestureState.tracker))
 
 useEventListener(window, 'contextmenu', (evt) => {
-  if (gestureState.processing) {
+  if (gestureState.preventCtxMenu) {
     evt.preventDefault()
   }
 })
@@ -38,13 +39,15 @@ useEventListener(window, 'mousedown', (evt) => {
     return
   }
 
-  if (gestureState.processing) {
+  if (gestureState.preventCtxMenu) {
     gestureState.processing = false
+    gestureState.preventCtxMenu = false
     clearPath()
     clearTimeout(gestureState.clearHandler)
     return
   }
 
+  gestureState.preventCtxMenu = true
   gestureState.processing = true
   evt.preventDefault()
 })
@@ -56,13 +59,15 @@ useEventListener(window, 'mouseup', () => {
 
   clearTimeout(gestureState.clearHandler)
 
-  gestureState.clearHandler = window.setTimeout(() => {
-    gestureState.processing = false
-    if (gestureState.dirs.length) {
-      emit('detected', gestureState.dirs)
-    }
+  if (gestureState.dirs.length) {
+    emit('detected', gestureState.dirs)
+  }
 
-    clearPath()
+  gestureState.processing = false
+  clearPath()
+
+  gestureState.clearHandler = window.setTimeout(() => {
+    gestureState.preventCtxMenu = false
   }, gestureState.clearTimeout)
 })
 
