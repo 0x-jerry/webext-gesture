@@ -11,6 +11,7 @@ export interface GesturePosition {
 }
 
 export interface GestureAction {
+  name: string
   gesture: GestureDir[]
   action: () => Promise<void> | void
 }

@@ -4,6 +4,7 @@ import { matchThenExecGestures } from './utils'
 
 const backgroundActions: GestureAction[] = [
   {
+    name: 'Close Tab',
     gesture: [GestureDir.Down, GestureDir.Right],
     async action() {
       const tabs = await browser.tabs.query({
@@ -21,7 +22,8 @@ const backgroundActions: GestureAction[] = [
     },
   },
   {
-    gesture: [GestureDir.Right, GestureDir.Up],
+    name: 'Restore Tab',
+    gesture: [GestureDir.Left, GestureDir.Up],
     async action() {
       await browser.sessions.restore()
     },
