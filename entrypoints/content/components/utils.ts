@@ -32,3 +32,10 @@ export function calcPath(positions: GesturePosition[]) {
 
   return d
 }
+
+export const dirCharMap = {
+  [GestureDir.Up]: '↑',
+  [GestureDir.Right]: '→',
+  [GestureDir.Down]: '↓',
+  [GestureDir.Left]: '←'
+}

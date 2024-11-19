@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useEventListener } from '@vueuse/core'
 import { reactive } from 'vue'
-import { calcDirection, calcPath, distance } from './utils'
+import { calcDirection, calcPath, dirCharMap, distance } from './utils'
 import type { GestureDir, GesturePosition } from '@/services/types'
 
 export interface GestureDetectionProps {
@@ -104,12 +104,12 @@ function clearPath() {
 <template>
   <div class="tracker">
     <svg style="width: 100%; height: 100%" v-if="trackerPath">
-      <path :d="trackerPath" stroke="red" stroke-width="2" fill="none" />
+      <path :d="trackerPath" stroke="#0398fc" stroke-width="2" fill="none" />
     </svg>
 
-    <div class="gesture-directions" v-if="gestureState.dirs">
+    <div class="gesture-directions" v-if="gestureState.dirs.length">
       <div class="gesture-direction" v-for="g in gestureState.dirs">
-        {{ g }}
+        {{ dirCharMap[g] }}
       </div>
     </div>
   </div>
@@ -127,16 +127,31 @@ function clearPath() {
 
 .gesture-directions {
   position: fixed;
-  bottom: 400px;
-  width: 80vw;
+  width: 100vw;
+  bottom: 20vh;
+  padding: 10px 40px;
+  background: rgba(197, 197, 197, 0.295);
+
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
+
+  color: black;
+  font-family: monospace;
+
+  font-weight: bold;
 }
 
 .gesture-direction {
-  @size: 100px;
+  @size: 30px;
   width: @size;
   height: @size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(143, 143, 143, 0.322);
+  border-radius: 4px;
 }
 </style>
