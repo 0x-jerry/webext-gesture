@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { useEventListener } from '@vueuse/core'
 import { reactive } from 'vue'
-import { GestureDir, Position } from './types'
 import { calcDirection, calcPath, distance } from './utils'
+import type { GestureDir, GesturePosition } from '@/entrypoints/services/types'
 
 export interface GestureDetectionProps {
   /**
@@ -20,7 +20,7 @@ const emit = defineEmits<{
 const gestureState = reactive({
   processing: false,
   dirs: [] as GestureDir[],
-  tracker: [] as Position[],
+  tracker: [] as GesturePosition[],
   clearHandler: -1,
   clearTimeout: 200,
 })

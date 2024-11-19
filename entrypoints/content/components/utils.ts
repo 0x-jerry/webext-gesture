@@ -1,6 +1,6 @@
-import { GestureDir, Position } from './types'
+import { type GesturePosition, GestureDir } from '@/entrypoints/services/types'
 
-export function calcDirection(p1: Position, p2: Position) {
+export function calcDirection(p1: GesturePosition, p2: GesturePosition) {
   const x = p2.x - p1.x
   const y = p2.y - p1.y
 
@@ -19,13 +19,13 @@ export function calcDirection(p1: Position, p2: Position) {
   return GestureDir.Up
 }
 
-export function distance(p1: Position, p2: Position) {
+export function distance(p1: GesturePosition, p2: GesturePosition) {
   const dx = p1.x - p2.x
   const dy = p1.y - p2.y
   return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2))
 }
 
-export function calcPath(positions: Position[]) {
+export function calcPath(positions: GesturePosition[]) {
   const d = positions
     .map(({ x, y }, idx) => (idx === 0 ? `M ${x},${y}` : `L ${x},${y}`))
     .join(' ')

@@ -1,9 +1,17 @@
 <script lang="ts" setup>
 import GestureDetection from './components/GestureDetection.vue'
-import { GestureDir } from './components/types'
+import { GestureDir } from '../services/types'
+import { execGestures } from './components/actions'
+import { getGestureService } from '../services/GestureService'
 
-function detectedGesture(gesture: GestureDir[]) {
-  console.log(gesture)
+const gestureService = getGestureService()
+
+async function detectedGesture(gesture: GestureDir[]) {
+  if (await execGestures(gesture)) {
+    return
+  }
+
+  await gestureService.execGestures(gesture)
 }
 </script>
 
