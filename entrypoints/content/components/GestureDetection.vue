@@ -73,7 +73,7 @@ useEventListener(window, 'mouseup', () => {
   gestureState.clearHandler = window.setTimeout(() => {
     gestureState.preventCtxMenu = false
   }, gestureState.clearTimeout)
-})
+}, { capture: true })
 
 useEventListener(window, 'mousemove', (evt) => {
   if (!gestureState.processing) {
@@ -102,6 +102,8 @@ useEventListener(window, 'mousemove', (evt) => {
   }
 
   gestureState.tracker.push(currentPos)
+}, {
+  capture: true
 })
 
 function clearPath() {
