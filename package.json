@@ -18,19 +18,19 @@
     "release": "x-release --publish false"
   },
   "dependencies": {
-    "@vueuse/core": "^12.3.0",
+    "@vueuse/core": "^12.7.0",
     "@webext-core/proxy-service": "^1.2.1",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@0x-jerry/x-release": "^2.2.2",
-    "@types/chrome": "^0.0.292",
+    "@types/chrome": "^0.0.307",
     "@wxt-dev/module-vue": "^1.0.2",
     "crx": "^5.0.1",
-    "less": "^4.2.1",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3",
-    "vue-tsc": "^2.2.0",
-    "wxt": "^0.19.23"
+    "less": "^4.2.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vue-tsc": "^2.2.4",
+    "wxt": "^0.19.27"
   }
 }
