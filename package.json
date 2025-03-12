@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@0x-jerry/x-release": "^2.2.2",
-    "@types/chrome": "^0.0.307",
+    "@types/chrome": "^0.0.309",
     "@wxt-dev/module-vue": "^1.0.2",
     "crx": "^5.0.1",
     "less": "^4.2.2",
