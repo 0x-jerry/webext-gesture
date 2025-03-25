@@ -32,6 +32,8 @@ useEventListener(window, 'contextmenu', (evt) => {
   if (gestureState.preventCtxMenu) {
     evt.preventDefault()
   }
+}, {
+  capture: true
 })
 
 useEventListener(window, 'mousedown', (evt) => {
@@ -50,6 +52,8 @@ useEventListener(window, 'mousedown', (evt) => {
   gestureState.preventCtxMenu = true
   gestureState.processing = true
   evt.preventDefault()
+}, {
+  capture: true
 })
 
 useEventListener(window, 'mouseup', () => {
