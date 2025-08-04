@@ -40,8 +40,8 @@ importers:
         specifier: ^5.8.2
         version: 5.8.2
       vue-tsc:
-        specifier: ^2.2.8
-        version: 2.2.8(typescript@5.8.2)
+        specifier: ^3.0.0
+        version: 3.0.5(typescript@5.8.2)
       wxt:
         specifier: ^0.19.29
         version: 0.19.29(@types/node@22.13.13)(less@4.2.2)(rollup@4.37.0)(tsx@4.19.3)
@@ -337,67 +337,56 @@ packages:
     resolution: {integrity: sha512-hhAALKJPidCwZcj+g+iN+38SIOkhK2a9bqtJR+EtyxrKKSt1ynCBeqrQy31z0oWU6thRZzdx53hVgEbRkuI19w==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.37.0':
     resolution: {integrity: sha512-jUb/kmn/Gd8epbHKEqkRAxq5c2EwRt0DqhSGWjPFxLeFvldFdHQs/n8lQ9x85oAeVb6bHcS8irhTJX2FCOd8Ag==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.37.0':
     resolution: {integrity: sha512-oNrJxcQT9IcbcmKlkF+Yz2tmOxZgG9D9GRq+1OE6XCQwCVwxixYAa38Z8qqPzQvzt1FCfmrHX03E0pWoXm1DqA==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.37.0':
     resolution: {integrity: sha512-pfxLBMls+28Ey2enpX3JvjEjaJMBX5XlPCZNGxj4kdJyHduPBXtxYeb8alo0a7bqOoWZW2uKynhHxF/MWoHaGQ==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-loongarch64-gnu@4.37.0':
     resolution: {integrity: sha512-yCE0NnutTC/7IGUq/PUHmoeZbIwq3KRh02e9SfFh7Vmc1Z7atuJRYWhRME5fKgT8aS20mwi1RyChA23qSyRGpA==}
     cpu: [loong64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.37.0':
     resolution: {integrity: sha512-NxcICptHk06E2Lh3a4Pu+2PEdZ6ahNHuK7o6Np9zcWkrBMuv21j10SQDJW3C9Yf/A/P7cutWoC/DptNLVsZ0VQ==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.37.0':
     resolution: {integrity: sha512-PpWwHMPCVpFZLTfLq7EWJWvrmEuLdGn1GMYcm5MV7PaRgwCEYJAwiN94uBuZev0/J/hFIIJCsYw4nLmXA9J7Pw==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.37.0':
     resolution: {integrity: sha512-DTNwl6a3CfhGTAOYZ4KtYbdS8b+275LSLqJVJIrPa5/JuIufWWZ/QFvkxp52gpmguN95eujrM68ZG+zVxa8zHA==}
     cpu: [riscv64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.37.0':
     resolution: {integrity: sha512-hZDDU5fgWvDdHFuExN1gBOhCuzo/8TMpidfOR+1cPZJflcEzXdCy1LjnklQdW8/Et9sryOPJAKAQRw8Jq7Tg+A==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.37.0':
     resolution: {integrity: sha512-pKivGpgJM5g8dwj0ywBwe/HeVAUSuVVJhUTa/URXjxvoyTT/AxsLTAbkHkDHG7qQxLoW2s3apEIl26uUe08LVQ==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.37.0':
     resolution: {integrity: sha512-E2lPrLKE8sQbY/2bEkVTGDEk4/49UYRVWgj90MY8yPjpnGBQ+Xi1Qnr7b7UIWw1NOggdFQFOLZ8+5CzCiz143w==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.37.0':
     resolution: {integrity: sha512-Jm7biMazjNzTU4PrQtr7VS8ibeys9Pn29/1bm4ph7CP2kf21950LgN+BaE2mJ1QujnvOc6p54eWWiVvn05SOBg==}
@@ -468,14 +457,14 @@ packages:
       vite: ^5.0.0 || ^6.0.0
       vue: ^3.2.25
 
-  '@volar/language-core@2.4.12':
-    resolution: {integrity: sha512-RLrFdXEaQBWfSnYGVxvR2WrO6Bub0unkdHYIdC31HzIEqATIuuhRRzYu76iGPZ6OtA4Au1SnW0ZwIqPP217YhA==}
+  '@volar/language-core@2.4.22':
+    resolution: {integrity: sha512-gp4M7Di5KgNyIyO903wTClYBavRt6UyFNpc5LWfyZr1lBsTUY+QrVZfmbNF2aCyfklBOVk9YC4p+zkwoyT7ECg==}
 
-  '@volar/source-map@2.4.12':
-    resolution: {integrity: sha512-bUFIKvn2U0AWojOaqf63ER0N/iHIBYZPpNGogfLPQ68F5Eet6FnLlyho7BS0y2HJ1jFhSif7AcuTx1TqsCzRzw==}
+  '@volar/source-map@2.4.22':
+    resolution: {integrity: sha512-L2nVr/1vei0xKRgO2tYVXtJYd09HTRjaZi418e85Q+QdbbqA8h7bBjfNyPPSsjnrOO4l4kaAo78c8SQUAdHvgA==}
 
-  '@volar/typescript@2.4.12':
-    resolution: {integrity: sha512-HJB73OTJDgPc80K30wxi3if4fSsZZAOScbj2fcicMuOPoOkcf9NNAINb33o+DzhBdF9xTKC1gnPmIRDous5S0g==}
+  '@volar/typescript@2.4.22':
+    resolution: {integrity: sha512-6ZczlJW1/GWTrNnkmZxJp4qyBt/SGVlcTuCWpI5zLrdPdCZsj66Aff9ZsfFaT3TyjG8zVYgBMYPuCm/eRkpcpQ==}
 
   '@vue/compiler-core@3.5.13':
     resolution: {integrity: sha512-oOdAkwqUfW1WqpwSYJce06wvt6HljgY3fGeM9NcVA1HaYOij3mZG9Rkysn0OHuyUAGMbEbARIpsG+LPVlBJ5/Q==}
@@ -492,8 +481,8 @@ packages:
   '@vue/compiler-vue2@2.7.16':
     resolution: {integrity: sha512-qYC3Psj9S/mfu9uVi5WvNZIzq+xnXMhOwbTFKKDD7b1lhpnn71jXSFdTQ+WsIEk0ONCd7VV2IMm7ONl6tbQ86A==}
 
-  '@vue/language-core@2.2.8':
-    resolution: {integrity: sha512-rrzB0wPGBvcwaSNRriVWdNAbHQWSf0NlGqgKHK5mEkXpefjUlVRP62u03KvwZpvKVjRnBIQ/Lwre+Mx9N6juUQ==}
+  '@vue/language-core@3.0.5':
+    resolution: {integrity: sha512-gCEjn9Ik7I/seHVNIEipOm8W+f3/kg60e8s1IgIkMYma2wu9ZGUTMv3mSL2bX+Md2L8fslceJ4SU8j1fgSRoiw==}
     peerDependencies:
       typescript: '*'
     peerDependenciesMeta:
@@ -565,8 +554,8 @@ packages:
     resolution: {integrity: sha512-TGw5yVi4saajsSEgz25grObGHEUaDrniwvA2qwSC060KfqGPdglhvPMA2lPIoxs3PQIItj2iag35fONcQqgUaQ==}
     engines: {node: '>=12.0'}
 
-  alien-signals@1.0.7:
-    resolution: {integrity: sha512-OfUBerxNtc4PsNwkSu8KVHMOJUKmFLmLmeYsBBTnwzlezm+LmvJk31iE7Ggk1hS/S7GIrn9QNGm+NlkhxJmMQQ==}
+  alien-signals@2.0.6:
+    resolution: {integrity: sha512-P3TxJSe31bUHBiblg59oU1PpaWPtmxF9GhJ/cB7OkgJ0qN/ifFSKUI25/v8ZhsT+lIG6ac8DpTOplXxORX6F3Q==}
 
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
@@ -1600,10 +1589,6 @@ packages:
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
-  minimatch@9.0.5:
-    resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
-    engines: {node: '>=16 || 14 >=14.17'}
-
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
@@ -2310,8 +2295,8 @@ packages:
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
-  vue-tsc@2.2.8:
-    resolution: {integrity: sha512-jBYKBNFADTN+L+MdesNX/TB3XuDSyaWynKMDgR+yCSln0GQ9Tfb7JS2lr46s2LiFUT1WsmfWsSvIElyxzOPqcQ==}
+  vue-tsc@3.0.5:
+    resolution: {integrity: sha512-PsTFN9lo1HJCrZw9NoqjYcAbYDXY0cOKyuW2E7naX5jcaVyWpqEsZOHN9Dws5890E8e5SDAD4L4Zam3dxG3/Cw==}
     hasBin: true
     peerDependencies:
       typescript: '>=5.0.0'
@@ -2746,15 +2731,15 @@ snapshots:
       vite: 6.2.3(@types/node@22.13.13)(jiti@2.4.2)(less@4.2.2)(tsx@4.19.3)
       vue: 3.5.13(typescript@5.8.2)
 
-  '@volar/language-core@2.4.12':
+  '@volar/language-core@2.4.22':
     dependencies:
-      '@volar/source-map': 2.4.12
+      '@volar/source-map': 2.4.22
 
-  '@volar/source-map@2.4.12': {}
+  '@volar/source-map@2.4.22': {}
 
-  '@volar/typescript@2.4.12':
+  '@volar/typescript@2.4.22':
     dependencies:
-      '@volar/language-core': 2.4.12
+      '@volar/language-core': 2.4.22
       path-browserify: 1.0.1
       vscode-uri: 3.1.0
 
@@ -2793,16 +2778,16 @@ snapshots:
       de-indent: 1.0.2
       he: 1.2.0
 
-  '@vue/language-core@2.2.8(typescript@5.8.2)':
+  '@vue/language-core@3.0.5(typescript@5.8.2)':
     dependencies:
-      '@volar/language-core': 2.4.12
+      '@volar/language-core': 2.4.22
       '@vue/compiler-dom': 3.5.13
       '@vue/compiler-vue2': 2.7.16
       '@vue/shared': 3.5.13
-      alien-signals: 1.0.7
-      minimatch: 9.0.5
+      alien-signals: 2.0.6
       muggle-string: 0.4.1
       path-browserify: 1.0.1
+      picomatch: 4.0.2
     optionalDependencies:
       typescript: 5.8.2
 
@@ -2882,7 +2867,7 @@ snapshots:
 
   adm-zip@0.5.16: {}
 
-  alien-signals@1.0.7: {}
+  alien-signals@2.0.6: {}
 
   ansi-align@3.0.1:
     dependencies:
@@ -3934,10 +3919,6 @@ snapshots:
     dependencies:
       brace-expansion: 1.1.11
 
-  minimatch@9.0.5:
-    dependencies:
-      brace-expansion: 2.0.1
-
   minimist@1.2.8: {}
 
   minipass@3.3.6:
@@ -4690,10 +4671,10 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
-  vue-tsc@2.2.8(typescript@5.8.2):
+  vue-tsc@3.0.5(typescript@5.8.2):
     dependencies:
-      '@volar/typescript': 2.4.12
-      '@vue/language-core': 2.2.8(typescript@5.8.2)
+      '@volar/typescript': 2.4.22
+      '@vue/language-core': 3.0.5(typescript@5.8.2)
       typescript: 5.8.2
 
   vue@3.5.13(typescript@5.8.2):
