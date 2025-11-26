@@ -10,9 +10,6 @@ export default defineContentScript({
       position: 'inline',
       anchor: 'body',
       onMount(uiContainer, shadow, shadowHost) {
-        shadowHost.style.position = 'fixed'
-        shadowHost.style.zIndex = '999999999'
-
         const rootEl = document.createElement('div')
         uiContainer.appendChild(rootEl)
 

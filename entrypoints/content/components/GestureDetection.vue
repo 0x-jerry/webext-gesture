@@ -133,6 +133,7 @@ function clearPath() {
 <style lang="less" scoped>
 .tracker {
   position: fixed;
+  z-index: 999999;
   pointer-events: none;
   top: 0;
   left: 0;
