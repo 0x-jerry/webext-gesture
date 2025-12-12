@@ -13,24 +13,22 @@
     "zip:firefox": "wxt zip -b firefox",
     "pack:crx": "crx pack .output/chrome-mv3 -o webext-gesture.crx -p ./key.pem",
     "build:prepare": "tsx ./scripts/prepare.ts",
-    "compile": "vue-tsc --noEmit",
     "postinstall": "wxt prepare",
     "release": "x-release --publish false"
   },
   "dependencies": {
-    "@vueuse/core": "^14.0.0",
+    "@vueuse/core": "^14.1.0",
     "@webext-core/proxy-service": "^1.2.1",
-    "vue": "^3.5.24"
+    "vue": "^3.5.25"
   },
   "devDependencies": {
     "@0x-jerry/x-release": "^2.4.1",
-    "@types/chrome": "^0.1.31",
+    "@types/chrome": "^0.1.32",
     "@wxt-dev/module-vue": "^1.0.3",
     "crx": "^5.0.1",
     "less": "^4.4.2",
-    "tsx": "^4.20.6",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.1.4",
     "wxt": "^0.20.11"
   }
 }
