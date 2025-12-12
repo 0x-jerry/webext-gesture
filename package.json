@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@0x-jerry/x-release": "^2.4.1",
+    "@biomejs/biome": "^2.3.8",
     "@types/chrome": "^0.1.32",
     "@wxt-dev/module-vue": "^1.0.3",
     "crx": "^5.0.1",
