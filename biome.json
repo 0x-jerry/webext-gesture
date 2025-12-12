@@ -9,7 +9,8 @@
     "ignoreUnknown": true,
     "includes": [
       "scripts/**",
-      "entrypoints/**"
+      "entrypoints/**",
+      "wxt.config.ts"
     ]
   },
   "formatter": {

@@ -1,7 +1,12 @@
-<script lang="ts" setup></script>
+<script setup lang="ts">
+import { browser } from 'wxt/browser'
+
+// browser.bookmarks.getTree()
+// browser.history
+</script>
 
 <template>
-  <div>New Tab</div>
+  <div class="text-red">New Tab</div>
 </template>
 
 <style scoped></style>
