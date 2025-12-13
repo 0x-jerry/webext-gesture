@@ -26,5 +26,11 @@ const props = defineProps<LinkProps>();
   &:hover {
     --uno: bg-gray-1;
   }
+
+  &[href] {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 </style>

@@ -38,7 +38,7 @@ useResizeObserver(bookmarksEl, () => {
   <div class="mt-100px">
     <div class="content w-60vw max-w-700px m-auto">
       <div class="w-full px-4 py-2 border-(1 solid gray-3) rounded-full text-lg mb-4">
-        <input class="w-full border-none appearance-none outline-none " v-model="filter" type="text"
+        <input class="search-input w-full border-none appearance-none outline-none" v-model="filter" type="text"
           placeholder="Search ...">
       </div>
 
@@ -51,5 +51,9 @@ useResizeObserver(bookmarksEl, () => {
 <style lang="less">
 .split-border {
   --uno: border-(0 l solid gray-2);
+}
+
+.search-input {
+  line-height: 1.5em;
 }
 </style>
