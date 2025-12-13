@@ -44,8 +44,8 @@ const bookmarksOther = computed(() => bookmarksData.state.value[0]?.children?.fi
           placeholder="Search ...">
       </div>
 
-      <TopSites :filter="filter" :max-count="5" />
-      <RecentClosed :filter="filter" :max-count="5" />
+      <TopSites :filter="filter" :max-count="10" />
+      <RecentClosed :filter="filter" :max-count="20" />
     </div>
   </div>
 </template>
