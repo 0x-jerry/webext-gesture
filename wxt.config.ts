@@ -10,7 +10,7 @@ export default defineConfig({
   webExt: {
     chromiumProfile: '.profile/chrome',
     keepProfileChanges: true,
-    startUrls: ['https://example.com'],
+    startUrls: ['chrome://new-tab'],
   },
   manifestVersion: 3,
   manifest: {
@@ -19,6 +19,13 @@ export default defineConfig({
     homepage_url: 'https://github.com/0x-jerry/webext-gesture',
     update_url:
       'https://raw.githubusercontent.com/0x-jerry/webext-gesture/main/updates.xml',
-    permissions: ['tabs', 'activeTab', 'sessions'],
+    permissions: [
+      'tabs',
+      'activeTab',
+      'sessions',
+      'history',
+      'topSites',
+      'bookmarks',
+    ],
   },
 })

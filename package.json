@@ -17,6 +17,7 @@
     "release": "x-release --publish false"
   },
   "dependencies": {
+    "@floating-ui/vue": "^1.1.9",
     "@vueuse/core": "^14.1.0",
     "@webext-core/proxy-service": "^1.2.1",
     "vue": "^3.5.25"
