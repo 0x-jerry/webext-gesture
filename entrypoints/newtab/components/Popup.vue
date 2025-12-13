@@ -31,15 +31,7 @@ const { floatingStyles } = useFloating(referenceEl, floatingEl, {
   placement: computed(() => props.placement),
   middleware: [offset({
     mainAxis: 1,
-  }), flip(), shift(), size({
-    apply({ availableWidth, availableHeight, elements }) {
-      // Change styles, e.g.
-      Object.assign(elements.floating.style, {
-        maxWidth: `${Math.max(0, availableWidth)}px`,
-        maxHeight: `${Math.max(0, availableHeight)}px`,
-      });
-    }
-  })],
+  }), flip()],
   whileElementsMounted: autoUpdate,
 })
 
@@ -55,11 +47,9 @@ const styles = computed(() => {
   <div class="reference" ref="referenceEl">
     <slot name="reference" :active="isVisible"></slot>
 
-    <Teleport to="body">
-      <div ref="floatingEl" :style="styles" v-show="isVisible">
-        <slot></slot>
-      </div>
-    </Teleport>
+    <div ref="floatingEl" :style="styles" v-if="isVisible">
+      <slot></slot>
+    </div>
   </div>
 </template>
 

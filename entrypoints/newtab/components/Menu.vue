@@ -18,10 +18,10 @@ const isFolder = computed(() => !props.url)
   <div class="menu w-full">
     <template v-if="isFolder">
       <Popup placement="right-start">
-        <template #reference>
-          <div class="menu-label">{{ props.title }}</div>
+        <template #reference="{ active }">
+          <Link :label="title" :active="active" />
         </template>
-        <div class="bg-white p-4 max-h-85vh overflow-y-auto w-400px">
+        <div class="bg-white max-h-85vh overflow-y-auto shadow-lg w-400px">
           <Menu v-for="(menu, index) in props.children" :key="index" v-bind="menu" />
         </div>
       </Popup>
