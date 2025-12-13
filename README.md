@@ -15,5 +15,4 @@ Current supported gestures:
 
 Please download from [release] page.
 
-
-[release]: https://github.com/0x-jerry/webext-gesture/releases
+[release]: https://github.com/0x-jerry/webext-universal/releases

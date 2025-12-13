@@ -1,5 +1,5 @@
 {
-  "name": "webext-gesture",
+  "name": "webext-universal",
   "description": "Mouse gestures for web browser.",
   "private": true,
   "version": "0.2.3",
@@ -11,7 +11,7 @@
     "build:firefox": "wxt build -b firefox",
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
-    "pack:crx": "crx pack .output/chrome-mv3 -o webext-gesture.crx -p ./key.pem",
+    "pack:crx": "crx pack .output/chrome-mv3 -o webext-universal.crx -p ./key.pem",
     "build:prepare": "tsx ./scripts/prepare.ts",
     "postinstall": "wxt prepare",
     "release": "x-release --publish false"

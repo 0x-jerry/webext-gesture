@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - '**'
+      - "**"
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - run: pnpm i
 
@@ -39,4 +39,4 @@ jobs:
         with:
           body_path: GEN_CHANGELOG.md
           files: |
-            webext-gesture.crx
+            webext-universal.crx
