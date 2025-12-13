@@ -9,7 +9,7 @@ defineProps<SectionProps>()
 
 <template>
   <div class="section px-4 py-2">
-    <div class="title text-gray-5 text-xl mb-2">
+    <div class="title text-gray-4 text-xl mb-2">
       {{ title }}
     </div>
     <div class="content">

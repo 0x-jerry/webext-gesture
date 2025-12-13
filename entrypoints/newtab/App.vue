@@ -38,7 +38,7 @@ const bookmarksOther = computed(() => bookmarksData.state.value[0]?.children?.fi
     </div>
   </div>
   <div class="mt-100px">
-    <div class="content w-60vw m-auto">
+    <div class="content w-60vw max-w-700px m-auto">
       <div class="w-full px-4 py-2 border-(1 solid gray-3) rounded-full text-lg mb-4">
         <input class="w-full border-none appearance-none outline-none " v-model="filter" type="text"
           placeholder="Search ...">
