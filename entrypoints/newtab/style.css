@@ -1,0 +1,9 @@
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

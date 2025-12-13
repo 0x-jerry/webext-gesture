@@ -20,11 +20,11 @@ const props = defineProps<DropdownProps>()
     </template>
     <template v-else>
       <Popup placement="bottom-start">
-        <template #reference>
-          <div class="title">{{ title }}</div>
+        <template #reference="{ active }">
+          <Link :label="title" :active="active" />
         </template>
 
-        <div>
+        <div class="bg-white shadow-lg overflow-auto max-h-85vh">
           <Menu v-for="(menu, index) in props.menus" :key="index" v-bind="menu" />
         </div>
       </Popup>

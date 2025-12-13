@@ -21,7 +21,7 @@ const isFolder = computed(() => !props.url)
         <template #reference>
           <div class="menu-label">{{ props.title }}</div>
         </template>
-        <div class="popover">
+        <div class="bg-white p-4">
           <Menu v-for="(menu, index) in props.children" :key="index" v-bind="menu" />
         </div>
 

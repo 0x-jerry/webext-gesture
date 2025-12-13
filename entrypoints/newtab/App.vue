@@ -22,11 +22,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="text-red">New Tab</div>
-  <div class="flex">
-    <div class="first-level" v-for="item in bookmarksBar?.children">
-
-      <Dropdown :title="item.title" :menus="item.children" />
+  <div class="shadow-lg overflow-auto">
+    <div class="flex w-max">
+      <template v-for="item in bookmarksBar?.children">
+        <Dropdown :title="item.title" :menus="item.children" />
+      </template>
     </div>
   </div>
   <div>
