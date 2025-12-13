@@ -15,16 +15,15 @@ const isFolder = computed(() => !props.url)
 </script>
 
 <template>
-  <div class="menu">
+  <div class="menu w-full">
     <template v-if="isFolder">
       <Popup placement="right-start">
         <template #reference>
           <div class="menu-label">{{ props.title }}</div>
         </template>
-        <div class="bg-white p-4">
+        <div class="bg-white p-4 max-h-85vh overflow-y-auto w-300px">
           <Menu v-for="(menu, index) in props.children" :key="index" v-bind="menu" />
         </div>
-
       </Popup>
     </template>
     <template v-else>

@@ -10,16 +10,17 @@ const props = defineProps<LinkProps>();
 
 <template>
   <a class="link px-4 py-2" :class="{ active }" :href="props.url" target="_blank">
-    <slot>{{ props.label }}</slot>
+    <img v-if="url" :src="`_favicon?size=16&pageUrl=${url}`" alt="">
+    <span class="flex-1 truncate">
+      {{ props.label }}
+    </span>
   </a>
 </template>
 
 <style lang="less" scoped>
 .link {
-  display: block;
-  --uno: text-gray-8 truncate;
+  --uno: text-gray-8 flex gap-2 items-center;
   text-decoration: none;
-  max-width: 300px;
 
   &.active,
   &:hover {

@@ -24,7 +24,7 @@ const props = defineProps<DropdownProps>()
           <Link :label="title" :active="active" />
         </template>
 
-        <div class="bg-white shadow-lg overflow-auto max-h-85vh">
+        <div class="bg-white shadow-lg overflow-auto max-h-85vh w-300px">
           <Menu v-for="(menu, index) in props.menus" :key="index" v-bind="menu" />
         </div>
       </Popup>

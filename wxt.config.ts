@@ -26,6 +26,14 @@ export default defineConfig({
       'history',
       'topSites',
       'bookmarks',
+      'favicon',
+      'sessions',
+    ],
+    web_accessible_resources: [
+      {
+        resources: ['_favicon/*'],
+        matches: ['<all_urls>'],
+      },
     ],
   },
 })

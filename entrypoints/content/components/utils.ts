@@ -1,4 +1,4 @@
-import { type GesturePosition, GestureDir } from '@/services/types'
+import { GestureDir, type GesturePosition } from '@/services/types'
 
 export function calcDirection(p1: GesturePosition, p2: GesturePosition) {
   const x = p2.x - p1.x
@@ -22,7 +22,7 @@ export function calcDirection(p1: GesturePosition, p2: GesturePosition) {
 export function distance(p1: GesturePosition, p2: GesturePosition) {
   const dx = p1.x - p2.x
   const dy = p1.y - p2.y
-  return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2))
+  return Math.sqrt(dx ** 2 + dy ** 2)
 }
 
 export function calcPath(positions: GesturePosition[]) {
@@ -37,5 +37,5 @@ export const dirCharMap = {
   [GestureDir.Up]: '↑',
   [GestureDir.Right]: '→',
   [GestureDir.Down]: '↓',
-  [GestureDir.Left]: '←'
+  [GestureDir.Left]: '←',
 }

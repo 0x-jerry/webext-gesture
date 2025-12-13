@@ -42,6 +42,13 @@ const { floatingStyles } = useFloating(referenceEl, floatingEl, {
   })],
   whileElementsMounted: autoUpdate,
 })
+
+const styles = computed(() => {
+  return {
+    ...floatingStyles.value,
+    zIndex: 100
+  }
+})
 </script>
 
 <template>
@@ -49,7 +56,7 @@ const { floatingStyles } = useFloating(referenceEl, floatingEl, {
     <slot name="reference" :active="isVisible"></slot>
 
     <Teleport to="body">
-      <div ref="floatingEl" class="content" :style="floatingStyles" v-show="isVisible">
+      <div ref="floatingEl" :style="styles" v-show="isVisible">
         <slot></slot>
       </div>
     </Teleport>
